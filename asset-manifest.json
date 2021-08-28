@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rest-api-github-ts/static/css/main.59d27250.chunk.css",
+    "main.js": "/rest-api-github-ts/static/js/main.e73f6751.chunk.js",
+    "main.js.map": "/rest-api-github-ts/static/js/main.e73f6751.chunk.js.map",
+    "runtime-main.js": "/rest-api-github-ts/static/js/runtime-main.979c76da.js",
+    "runtime-main.js.map": "/rest-api-github-ts/static/js/runtime-main.979c76da.js.map",
+    "static/css/2.52913d2b.chunk.css": "/rest-api-github-ts/static/css/2.52913d2b.chunk.css",
+    "static/js/2.f459f4b2.chunk.js": "/rest-api-github-ts/static/js/2.f459f4b2.chunk.js",
+    "static/js/2.f459f4b2.chunk.js.map": "/rest-api-github-ts/static/js/2.f459f4b2.chunk.js.map",
+    "index.html": "/rest-api-github-ts/index.html",
+    "static/css/2.52913d2b.chunk.css.map": "/rest-api-github-ts/static/css/2.52913d2b.chunk.css.map",
+    "static/css/main.59d27250.chunk.css.map": "/rest-api-github-ts/static/css/main.59d27250.chunk.css.map",
+    "static/js/2.f459f4b2.chunk.js.LICENSE.txt": "/rest-api-github-ts/static/js/2.f459f4b2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.979c76da.js",
+    "static/css/2.52913d2b.chunk.css",
+    "static/js/2.f459f4b2.chunk.js",
+    "static/css/main.59d27250.chunk.css",
+    "static/js/main.e73f6751.chunk.js"
+  ]
+}

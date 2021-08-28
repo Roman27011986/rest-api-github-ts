@@ -1,0 +1,35 @@
+.list {
+  display: flex;
+  justify-content: center;
+}
+.item {
+  position: fixed;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #789;
+  border-radius: 5px;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.imgbox {
+  width: 100px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar {
+  object-fit: contain;
+}
+
+.text {
+  font-family: "Azeret Mono";
+  transition: all 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #789;
+}
+.text:hover {
+  color: black;
+}

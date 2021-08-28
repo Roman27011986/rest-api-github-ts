@@ -33,9 +33,9 @@ const UserDitails = ({ history }: any) => {
             <button onClick={handleGoBack} className={styles.btn}>Go back</button>
             <div className={styles.userDitailsBox}>
             <div className={styles.imgBox}>
-                <img src={user?.avatar_url}  alt="" />
+                <img src={user?.avatar_url}  alt={user?.login} />
             </div>
-            <ul>
+            <ul className={styles.userinfo}>
                 <li className={styles.item}>login: <span className={styles.text}>{user?.login}</span></li>
                 <li className={styles.item}>repos: <span className={styles.text}>{user?.public_repos}</span></li>
                 <li className={styles.item}>followers: <span className={styles.text}>{user?.followers}</span></li>

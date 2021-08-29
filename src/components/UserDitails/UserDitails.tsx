@@ -4,7 +4,7 @@ import { withRouter } from "react-router";
 import Loader from "react-loader-spinner";
 import styles from './UserDitails.module.css'
 
-const UserDitails = ({ history,match }: any) => {
+const UserDitails = ({ history, match }: any) => {
     const [user, setUser] = useState<any>(null);
     const [repo, setRepo] = useState<any>([]);
     const [filter, setfilter] = useState<string>('');
@@ -17,9 +17,9 @@ const UserDitails = ({ history,match }: any) => {
     
     const getRepo = async (name: string) => {
         setIsLoading(true)
-        const res = await getUserRepo(name)
+        const response = await getUserRepo(name)
         setIsLoading(false)
-        setRepo(res?.data)
+        setRepo(response?.data)
     };
 
     const getUserDitails = async (name: string) => {
@@ -38,7 +38,7 @@ const UserDitails = ({ history,match }: any) => {
     return (
         <div className={styles.userDitailsPageBox}>
             <button onClick={handleGoBack} className={styles.btn}>Go back</button>
-            {!isLoading ? <div className={styles.userDitailsBox}>
+            { !isLoading ? <div className={styles.userDitailsBox}>
             <div className={styles.imgBox}>
                 <img src={user?.avatar_url}  alt={user?.login} />
             </div>
@@ -53,10 +53,10 @@ const UserDitails = ({ history,match }: any) => {
                       color="#00BFFF"
                       height={100}
                       width={100}
-                      timeout={3000}/>}
+                      timeout={3000}/> }
             <input type="text" placeholder='filter repo by name' onChange={e => setfilter(e.target.value)} value={filter} />
             <h2 className={styles.title}>User repo:</h2>
-           {!isLoading ? <ul className={styles.repoList}>
+           { !isLoading ? <ul className={styles.repoList}>
                 {visibleRpo.map((element: any) => (
                     <li key={element.id}>
                         <a target="_blank" className={styles.text} href={element.svn_url} rel="noreferrer">{element.name}</a>
@@ -66,7 +66,7 @@ const UserDitails = ({ history,match }: any) => {
                       color="#00BFFF"
                       height={100}
                       width={100}
-                      timeout={3000}/>}  
+                      timeout={3000}/> }  
             </div>
     );
 };

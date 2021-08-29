@@ -4,7 +4,7 @@ import UsersList from "../UsersList";
 import styles from './SearchUser.module.css'
 const debounce = require('lodash.debounce');
 
-export default function SearchUser  (){
+export default function SearchUser(){
   const [value, setValue] = useState<string>("");
   const [data, setData] = useState<any[]>([]);
  
@@ -39,9 +39,9 @@ export default function SearchUser  (){
     <div className={styles.box}>
       <div>
         <input type="text"  placeholder="search user by name" value={value} onChange={handleChange} />
-        {data?.length > 0 && <button onClick={refreshPage} className={styles.btnRefresh}>Refresh page</button>}
+        { data?.length > 0 && <button onClick={refreshPage} className={styles.btnRefresh}>Refresh page</button> }
       </div>
-      {data?.length > 0 && <UsersList data={data} />}
+      { data?.length > 0 && <UsersList data={data} /> }
     </div>
   );
 };

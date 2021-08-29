@@ -9,7 +9,7 @@ function App() {
     <ToastContainer autoClose={2000} />
     <Switch>
       <Route exact path='/' component={SearchUserPage} />
-      <Route  path='/userRepo' component={UserDitailsPage}/>
+      <Route  path='/ditails/:user' component={UserDitailsPage}/>
     </Switch>
     </>
   );

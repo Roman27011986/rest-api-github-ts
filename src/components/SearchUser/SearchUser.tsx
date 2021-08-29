@@ -17,12 +17,15 @@ export default function SearchUser  (){
   const delayedQuery = useRef(debounce(async (q: string) => {
     const response = await getUsersByName(q)
     setData(response)
-    
   }, 500)).current;
   
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
     setValue(value);
+    if (!value) {
+      setData(null)
+      return
+    }
     delayedQuery(value);
   };
 

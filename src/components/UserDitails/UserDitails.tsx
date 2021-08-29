@@ -9,7 +9,7 @@ const UserDitails = ({ history }: any) => {
     const [filter, setfilter] = useState<string>('');
     
     useEffect(() => {
-        const users = localStorage.getItem('users')
+        const users = sessionStorage.getItem('users')
         const parsUser = JSON.parse(users!)
         setUser(parsUser)
         getRepo(parsUser.repos_url)

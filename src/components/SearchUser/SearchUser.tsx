@@ -9,7 +9,7 @@ export default function SearchUser  (){
   const [data, setData] = useState(null);
  
   useEffect(() => {
-    const users = localStorage.getItem('users')
+    const users = sessionStorage.getItem('users')
     const parsedUsers = JSON.parse(users!)
     parsedUsers ? setData(parsedUsers) : setData(null)
   },[])

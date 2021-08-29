@@ -8,7 +8,7 @@ export const getUsersByName = async (query: string): Promise<any> => {
       `users/${query}`, 
     );
   toast.success(`User ${query} found`)
-  localStorage.setItem('users', JSON.stringify(data))
+  sessionStorage.setItem('users', JSON.stringify(data))
   return data;
   } catch (error) {
     toast.error(error.message)

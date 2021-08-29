@@ -6,12 +6,12 @@ const debounce = require('lodash.debounce');
 
 export default function SearchUser  (){
   const [value, setValue] = useState<string>("");
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any[]>([]);
  
   useEffect(() => {
     const users = sessionStorage.getItem('users')
     const parsedUsers = JSON.parse(users!)
-    parsedUsers ? setData(parsedUsers) : setData(null)
+    parsedUsers ? setData(parsedUsers) : setData([])
   },[])
   
   const delayedQuery = useRef(debounce(async (q: string) => {
@@ -23,16 +23,25 @@ export default function SearchUser  (){
     const { value } = event.target;
     setValue(value);
     if (!value) {
-      setData(null)
+      refreshPage()
       return
     }
     delayedQuery(value);
   };
 
+  const refreshPage = () => {
+    setData([])
+    setValue('')
+    sessionStorage.removeItem('users')
+  }
+
   return (
     <div className={styles.box}>
-      <input type="text" placeholder="search user by name" value={value} onChange={handleChange} />
-      {data && <UsersList data={data} />}
+      <div>
+        <input type="text"  placeholder="search user by name" value={value} onChange={handleChange} />
+        {data?.length > 0 && <button onClick={refreshPage} className={styles.btnRefresh}>Refresh page</button>}
+      </div>
+      {data?.length > 0 && <UsersList data={data} />}
     </div>
   );
 };

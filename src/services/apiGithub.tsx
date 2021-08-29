@@ -20,7 +20,7 @@ export const getUserRepo = async (query: string): Promise<any> => {
     const response = await axios.get(
     `users/${query}/repos`,
    );
-  toast.success('success')
+  toast.success('User repo success')
   return response;
  } catch (error) {
    toast.error(error.message)
@@ -32,7 +32,7 @@ export const getUserInfo = async (query: string):Promise<any> => {
     const response = await axios.get(
     `users/${query}`,
    );
-  toast.success('success')
+  toast.success('User info success')
   return response;
  } catch (error) {
    toast.error(error.message)

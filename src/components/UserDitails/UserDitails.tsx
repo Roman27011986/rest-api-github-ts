@@ -11,8 +11,8 @@ const UserDitails = ({ history,match }: any) => {
     const [isLoading, setIsLoading] = useState<boolean>(false);
     
     useEffect(() => {
-        getRepo(match.params.user.slice(1))
-        getUserDitails(match.params.user.slice(1))
+        getRepo(match.params.user)
+        getUserDitails(match.params.user)
     }, [match.params.user]);
     
     const getRepo = async (name: string) => {

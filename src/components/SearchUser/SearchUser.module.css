@@ -4,3 +4,17 @@
   align-items: center;
   padding-top: 50px;
 }
+.btnRefresh {
+  font-family: "Azeret Mono";
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(32, 97, 161, 0.061);
+  margin-left: 20px;
+  transition: all 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnRefresh:hover {
+  background-color: rgba(161, 32, 92, 0.061);
+  color: rgba(0, 223, 93, 0.664);
+}
